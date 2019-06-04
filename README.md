@@ -31,7 +31,7 @@ if __name__ == "__main__":
     client.run_forever()
 
 ````
-And as a response you get
+And as a response you should get
 ```
 ...
 ...
@@ -51,7 +51,7 @@ Testing
 You can run the tests by creating a Python virtual environment, installing
 the requirements from `test_requirements.txt` 
 ```
-pip install -r requirements.txt test_requirements_test
+pip install -r requirements.txt -r test_requirements.txt
 ```
 Then:   
 ```
