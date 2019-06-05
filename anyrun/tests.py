@@ -143,7 +143,7 @@ class AnyRunClientTest(TestCase):
         self.uut.connect()
         self.uut.run_forever()
 
-        ws_mock.WebSocketApp().run_forever.assert_called_once()
+        self.assertEqual(ws_mock.WebSocketApp().run_forever.call_count, 1)
 
     def test_call_on_error_raises_exception(self, _):
         with self.assertRaises(AnyRunException):
