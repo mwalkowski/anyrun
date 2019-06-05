@@ -15,7 +15,7 @@ It is built as a websocket client application
 ### QuickStart
 
 ```
-from anyrun.client import AnyRunClient
+from anyrun import AnyRunClient
 
 
 def callback(msg: dict) -> None:
@@ -55,12 +55,11 @@ pip install -r requirements.txt -r test_requirements.txt
 ```
 Then:   
 ```
-python pytest
+python pytest -v
 ```
 
 TODO
 ----
 
 - Add support for search.
-- Add more tests
 - More examples.

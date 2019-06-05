@@ -1,3 +1,4 @@
-from anyrun.client import AnyRunClient
+from anyrun.client import AnyRunClient, AnyRunException
 
-__all__ = ['AnyRunClient']
+__version__ = '0.1'
+__all__ = ['AnyRunClient', 'AnyRunException']
