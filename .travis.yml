@@ -1,12 +1,28 @@
 language: python
-python:
-  - "3.5"
-  - "3.6"
-# command to install dependencies
-install:
-  - pip install -r requirements.txt -r test_requirements.txt
-script:
-  - prospector
-  - pytest
-after_success:
-  - codecov
+
+stages:
+- test
+- deploy
+
+jobs:
+  include:
+
+  - stage: test
+    python:
+    - '3.5'
+    - '3.6'
+    install:
+    - pip install -r requirements.txt -r test_requirements.txt
+    script:
+    - prospector
+    - pytest -v
+    after_success:
+    - codecov
+
+  - stage: deploy
+    provider: pypi
+    user: mwalkows
+    password:
+      secure: Pe+StUK2XE67mISmxMKSkUv8NEYTWwew20aBnzxt4sXe+sTjdnRR5lbds+OTTIJW9QJvpfITN9vZsGS5kUSDo/x6w6VLdcNwv/jr+rnVDHp7N6V1hWPaMykdyWyZka89bY4VuUf8I3KZS1oPt4bBPhIE0aGhta+u/JvJDsG8nvoJ3Vnb5hIzZfiBh9HRCBuboVYetB7hYms1dxVxxHFi2lBdquUNC5rHplf8ALb7ZblDuO/f6H5D94J++XkSsQZjLfzioOTxk7Vfd6IHoQvnFtD6niImgT+H8bnhlHjhzdwEN7igrFz3qe0xAzj6vfl11szlgSpifK1e5P6jNC+cv/hm54D+GoHaF1+aCQGy0yIR4IL64x5Qo7NW98gm/IGJkSLvaUTXUvEwf/cp52Q/RqZo8rnq1u/mWc1FPVmRvBK0FllLF7xWJdMr2sL7FjCjRxjgNMdpMywu7ZuUPbdI9wUer3/llD05ycm4Y2PCsA3G64pF0ormR2qhph/O2dd7SblG1io1NjjvGZLRdWlJHfPtrB2D1Oq9wpUYcscy2WejaeapIGZ+YRHs4rROWs/oO3tGbQFiAKrHQU47pa66mmotGQ1z0Z2qxDxjtjdTRu5YXJ22uF73//UnjYcZdcBfaBsLXGml8REdgD0Mb2BB135Q3LI2SRU/vTjeIW4QeNs=
+    on:
+      tags: true
