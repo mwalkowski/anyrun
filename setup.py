@@ -7,7 +7,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 
 
 setup(
-    name="AnyRunClient",
+    name="anyrun",
     version="0.1",
     packages=find_packages(),
     install_requires=[
@@ -33,11 +33,6 @@ setup(
     license="pache Software License 2.0",
     keywords="malware submissions app.any.run",
     url="https://github.com/mwalkowski/anyrun",
-    project_urls={
-        "Bug Tracker": "https://github.com/mwalkowski/anyrun/issues",
-        "Documentation": "https://github.com/mwalkowski/anyrun/README.md",
-        "Source Code": "hhttps://github.com/mwalkowski/anyrun",
-    },
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',

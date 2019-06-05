@@ -1,4 +1,4 @@
-## APP.ANY.RUN CLIENT [![Build Status](https://travis-ci.com/mwalkowski/anyrun.svg?branch=master)](https://travis-ci.com/mwalkowski/anyrun) [![codecov](https://codecov.io/gh/mwalkowski/anyrun/branch/master/graph/badge.svg)](https://codecov.io/gh/mwalkowski/anyrun)
+## APP.ANY.RUN CLIENT [![Build Status](https://travis-ci.com/mwalkowski/anyrun.svg?branch=master)](https://travis-ci.com/mwalkowski/anyrun) [![codecov](https://codecov.io/gh/mwalkowski/anyrun/branch/master/graph/badge.svg)](https://codecov.io/gh/mwalkowski/anyrun) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![PyPI version](https://badge.fury.io/py/anyrun.svg)](https://badge.fury.io/py/anyrun)
 
 This is a package that allows downloading and searching malware analysis from public submissions from [app.any.run](https://app.any.run).
 It is built as a websocket client application 
@@ -12,6 +12,16 @@ It is built as a websocket client application
    - websocket_client==0.56.0
    - Python 3.5, 3.6, 3.7
 
+### Installation
+
+
+You can install django-celery-results either via the Python Package Index (PyPI)
+or from source.
+
+To install using `pip`,::
+
+    $ pip install -U anyrun
+ 
 ### QuickStart
 
 ```
