@@ -42,6 +42,11 @@ class AnyRunClientTest(TestCase):
             call(AnyRunClientTest.build_message({
                 'msg': 'sub',
                 'id': AnyRunClientTest.generate_token_stub(),
+                'name': 'meteor_autoupdate_clientVersions',
+                'params': []})),
+            call(AnyRunClientTest.build_message({
+                'msg': 'sub',
+                'id': AnyRunClientTest.generate_token_stub(),
                 'name': 'activeTasks',
                 'params': []}
             )),
@@ -76,7 +81,6 @@ class AnyRunClientTest(TestCase):
                         "runtype": [],
                         "name": "",
                         "verdict": [],
-                        "specs": [],
                         "ext": [],
                         "tag": "",
                         "significant": False,
@@ -99,7 +103,6 @@ class AnyRunClientTest(TestCase):
                     "runtype": [],
                     "name": "",
                     "verdict": [],
-                    "specs": [],
                     "ext": [],
                     "tag": "",
                     "significant": False,

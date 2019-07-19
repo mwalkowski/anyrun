@@ -46,6 +46,7 @@ class AnyRunClient:
         self.send_message({"msg": "method", "method": "host", "params": [], "id": "1"})
         self.send_message({"msg": "method", "method": "getPrefix", "params": [], "id": "2"})
         self.subscribe('meteor.loginServiceConfiguration')
+        self.subscribe('meteor_autoupdate_clientVersions')
         self.subscribe('activeTasks')
         self.subscribe('settings')
         self.subscribe('teams')
@@ -59,7 +60,6 @@ class AnyRunClient:
                 "runtype": [],
                 "name": "",
                 "verdict": [],
-                "specs": [],
                 "ext": [],
                 "tag": "",
                 "significant": False,
@@ -77,7 +77,6 @@ class AnyRunClient:
             "runtype": [],
             "name": "",
             "verdict": [],
-            "specs": [],
             "ext": [],
             "tag": "",
             "significant": False,

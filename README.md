@@ -58,14 +58,13 @@ And as a response you should get
 
 Testing
 -------
-You can run the tests by creating a Python virtual environment, installing
-the requirements from `test_requirements.txt` 
+You can run the tests by using tox.
 ```
-pip install -r requirements.txt -r test_requirements.txt
+pip install tox
 ```
 Then:   
 ```
-python pytest -v
+tox
 ```
 
 TODO
