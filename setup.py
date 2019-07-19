@@ -8,7 +8,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name="anyrun",
-    version="0.1",
+    version="0.2",
     packages=find_packages(),
     install_requires=[
         'websocket_client==0.56.0',
