@@ -21,7 +21,7 @@ def tests_require():
 
 setup(
     name="anyrun",
-    version="0.2",
+    version="0.3",
     packages=find_packages(),
     install_requires=install_requires(),
     tests_require=tests_require(),
