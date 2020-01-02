@@ -1,1 +1,2 @@
-websocket_client==0.56.0
+websocket_client==0.57.0
+pytest-runner==5.2

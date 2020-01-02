@@ -50,7 +50,12 @@ class AnyRunClient:
         self.subscribe('activeTasks')
         self.subscribe('settings')
         self.subscribe('teams')
-        self.subscribe('tasksHistoryCounter')
+        self.subscribe('files.avatars')
+        self.subscribe('statisticsDayVeridct')
+        self.subscribe('statisticsDayCountry')
+        self.subscribe('statisticsDayTags')
+        self.subscribe('statisticsDayTime')
+        self.subscribe('statisticsDayIOC')
         self.subscribe('publicTasks', [
             50, 0, {
                 "isPublic": True,
@@ -63,29 +68,10 @@ class AnyRunClient:
                 "ext": [],
                 "tag": "",
                 "significant": False,
-                "ip": "",
-                "fileHash": "",
-                "mitreId": "",
-                "sid": 0,
-                "skip": 0
             }])
-        self.subscribe('publicTasksCounter', [{
-            "isPublic": True,
-            "hash": "",
-            "major": "",
-            "bit": "",
-            "runtype": [],
-            "name": "",
-            "verdict": [],
-            "ext": [],
-            "tag": "",
-            "significant": False,
-            "ip": "",
-            "fileHash": "",
-            "mitreId": "",
-            "sid": 0,
-            "skip": 0
-        }])
+        self.subscribe('changeLog')
+        self.subscribe('activeTasksCounter')
+        self.subscribe('interestingTask')
 
     def subscribe(self, name: str, params: list = None) -> None:
         if not params:

@@ -65,7 +65,37 @@ class AnyRunClientTest(TestCase):
             call(AnyRunClientTest.build_message({
                 'msg': 'sub',
                 'id': AnyRunClientTest.generate_token_stub(),
-                'name': 'tasksHistoryCounter',
+                'name': 'files.avatars',
+                'params': []}
+            )),
+            call(AnyRunClientTest.build_message({
+                'msg': 'sub',
+                'id': AnyRunClientTest.generate_token_stub(),
+                'name': 'statisticsDayVeridct',
+                'params': []}
+            )),
+            call(AnyRunClientTest.build_message({
+                'msg': 'sub',
+                'id': AnyRunClientTest.generate_token_stub(),
+                'name': 'statisticsDayCountry',
+                'params': []}
+            )),
+            call(AnyRunClientTest.build_message({
+                'msg': 'sub',
+                'id': AnyRunClientTest.generate_token_stub(),
+                'name': 'statisticsDayTags',
+                'params': []}
+            )),
+            call(AnyRunClientTest.build_message({
+                'msg': 'sub',
+                'id': AnyRunClientTest.generate_token_stub(),
+                'name': 'statisticsDayTime',
+                'params': []}
+            )),
+            call(AnyRunClientTest.build_message({
+                'msg': 'sub',
+                'id': AnyRunClientTest.generate_token_stub(),
+                'name': 'statisticsDayIOC',
                 'params': []}
             )),
             call(AnyRunClientTest.build_message({
@@ -84,34 +114,25 @@ class AnyRunClientTest(TestCase):
                         "ext": [],
                         "tag": "",
                         "significant": False,
-                        "ip": "",
-                        "fileHash": "",
-                        "mitreId": "",
-                        "sid": 0,
-                        "skip": 0
                     }]}
             )),
             call(AnyRunClientTest.build_message({
                 'msg': 'sub',
                 'id': AnyRunClientTest.generate_token_stub(),
-                'name': 'publicTasksCounter',
-                'params': [{
-                    "isPublic": True,
-                    "hash": "",
-                    "major": "",
-                    "bit": "",
-                    "runtype": [],
-                    "name": "",
-                    "verdict": [],
-                    "ext": [],
-                    "tag": "",
-                    "significant": False,
-                    "ip": "",
-                    "fileHash": "",
-                    "mitreId": "",
-                    "sid": 0,
-                    "skip": 0
-                }]}
+                'name': 'changeLog',
+                'params': []}
+            )),
+            call(AnyRunClientTest.build_message({
+                'msg': 'sub',
+                'id': AnyRunClientTest.generate_token_stub(),
+                'name': 'activeTasksCounter',
+                'params': []}
+            )),
+            call(AnyRunClientTest.build_message({
+                'msg': 'sub',
+                'id': AnyRunClientTest.generate_token_stub(),
+                'name': 'interestingTask',
+                'params': []}
             )),
         ])
 
